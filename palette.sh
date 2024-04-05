@@ -51,12 +51,12 @@ fg256 () {
 }
 
 formattingAnd16colors () {
-    echo "set        reset                  ctrl seq: \e\${N}m"
-    echo -e "1    \e[1mbold\e[0m    21" # <- a bug?
-    echo -e "2     \e[2mdim\e[22m    22 $(commonColors {30..37})       Palette for"
-    echo -e "4 \e[4munderlined\e[24m 24 $(commonColors {40..47})   ANSI/VT100 Terminal"
-    echo -e "5   \e[5m*blink*\e[25m  25 $(commonColors {90..97})     Control Escape"
-    echo -e "7  \e[7mreversed\e[27m  27 $(commonColors {100..107})        Sequences"
+    echo "set           0 reset (all)       ctrl seq: \e\${N}m"
+    echo -e "1    \e[1mbold\e[0m    21                                       \e[2mdefault\e[22m                 \e[91mP\e[0m \e[92mA\e[0m \e[93mL\e[0m \e[94mE\e[0m \e[95mT\e[0m \e[96mT\e[0m \e[97mE                $VER\e[0m"
+    echo -e "2     \e[2mdim\e[22m    22 $(commonColors {30..37} 39)  \e[2mfg\e[22m                                "
+    echo -e "4 \e[4munderlined\e[24m 24 $(commonColors {40..47} 49)  \e[2mbg\e[22m                   \e[2mANSI/VT100 Terminal      (c) 2024 jarvenja\e[22m"
+    echo -e "5   \e[5m*blink*\e[25m  25 $(commonColors {90..97})                             \e[2mControl Escape        <jarvenja@gmail.com>\e[22m"
+    echo -e "7  \e[7mreversed\e[27m  27 $(commonColors {100..107})                                \e[2mSequences\e[22m"
     echo -e "8   \e[8mhidden\e[28m   28 \e[2m<--- hidden\e[22m"
 }
 
